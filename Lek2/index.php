@@ -7,7 +7,8 @@
 </head>
 <body>
     <?php 
-        include "php_ovn_if.php"
+        include "php_ovn_if.php";
+        include "php_ovn2.php";
     ?>
 </body>
 </html>
