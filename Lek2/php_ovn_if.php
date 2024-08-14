@@ -41,7 +41,7 @@
         }
         
         if($x > 2 && $x < 10) {
-            echo "<p>Variabeln x är $x</p>";
+            echo "<p>Variabeln x är $x och befinner sig mellan siffrorna 2-10</p>";
         }
 
         // date('D') skriver ut dagen
