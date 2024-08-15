@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -6,13 +7,16 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./assets/css/index.css">
+        <link rel="stylesheet" href="">
     </head>
     <body>
-        <?php 
-            include "php_array_ovn.php";
-            include "php_slingor.php";
-            include "php_dropdowmn.php";
-        ?>
+        <form method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
+            Message: <input type="text" name="fname">
+            <input type="submit">
+        </form>
+        
+       <?php 
+       
+       ?>
     </body>
 </html>
