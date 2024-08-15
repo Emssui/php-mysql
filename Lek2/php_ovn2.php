@@ -86,7 +86,7 @@ $text = "tomosart future crypto site";
 
         $myfile = fopen("tommensarts.txt", "r");
 
-        // echo fread($myfile,filesize("tommensarts.txt"));
+        echo fread($myfile,filesize("tommensarts.txt"));
 
 
         // Uppg 7
@@ -132,7 +132,7 @@ $text = "tomosart future crypto site";
 
         // Uppg 9 finns vid förra namnet
 
-        // Uppg 10
+        // Uppg 10 finns också uppe
     ?>
 </body>
 </html>
