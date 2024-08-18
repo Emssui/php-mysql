@@ -13,6 +13,8 @@
             include "php_array_ovn.php";
             include "php_slingor.php";
             include "php_dropdown.php";
+            include "php_dynamisk_meny.php";
+            include "php_login.php";
         ?>
     </body>
 </html>
