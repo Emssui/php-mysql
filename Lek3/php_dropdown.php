@@ -10,13 +10,33 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <form method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
+        <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             Message: <input type="text" name="fname">
             <input type="submit">
         </form>
         
-       <?php 
-       
-       ?>
+        <?php 
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $message = $_POST['fname'];
+                $file = 'messages.txt';
+
+                file_put_contents($file, $message . PHP_EOL, FILE_APPEND | LOCK_EX);
+
+                header("Location: " . $_SERVER['PHP_SELF']);
+                exit();
+            } 
+
+            if (file_exists("messages.txt")) {
+                $myfile = fopen("messages.txt", "r");
+                
+                while (($line = fgets($myfile)) !== false) {
+                    echo nl2br(htmlspecialchars($line));
+                }
+
+                fclose($myfile);
+            } else {
+                echo "No messages yet.";
+            }
+        ?>
     </body>
 </html>
